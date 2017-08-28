@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'uses/name:string'
 
   resources :posts
   devise_for :users

@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+20.times do |post|
+	Post.create(date: Date.today , rationale: "#{post} rationale content" , adjustment: "abc" ,Department: "ECE" , count: 1)
+end
+
+puts "20 posts have benn created"
