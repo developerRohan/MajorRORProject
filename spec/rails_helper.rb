@@ -6,6 +6,9 @@ require 'spec_helper'
 require 'rspec/rails'
 require 'capybara/rails'
 
+include Warden::Test::Helpers #they provide signin / signout functionality as it is not provided by capybara
+Warden.test_mode!
+
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|

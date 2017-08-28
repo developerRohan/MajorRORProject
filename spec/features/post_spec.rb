@@ -33,5 +33,8 @@ describe 'navigate' do
 	  click_on "Save"
 	  expect(page).to have_content("some rationale content")
 	end
+
+
+	
    end
 end
