@@ -1,9 +1,9 @@
 <ul class="custom-nav nav nav-tabs">
-	<li class="active">
+	<li class="<%= active?(root_path) %>">
 		<!-- <a href="#">Home</a> -->
 		<%= link_to 'Home' , root_path %>
 	</li>
-	<li>
+	<li class="<%= active?( posts_path) %>">
 		<!-- <a href="#">Profile</a> -->
 		<%= link_to 'Request Entries' , posts_path %>
 	</li>
