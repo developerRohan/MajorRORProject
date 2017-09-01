@@ -42,8 +42,9 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
   gem 'capybara', '~> 2.15', '>= 2.15.1'
-  gem 'database_cleaner', '~> 1.6', '>= 1.6.1
-'end
+  gem 'database_cleaner', '~> 1.6', '>= 1.6.1'
+  gem 'factory_girl_rails', '~> 4.8'
+end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
