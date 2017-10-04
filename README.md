@@ -1,24 +1,18 @@
-# README
+# MAJOR RUBY ON RAILS PROJECT
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Key requirement: company needs documentation that salaried employees did or did not get overtime each week
 
-Things you may want to cover:
+## models
+- post -> data:data rationale:text
+- user -> devise
+-adminuser => STI
 
-* Ruby version
+## features:
+- approval workflow
+- sms sending -> link to approval or overtime input
+- adminstrate admin dashboard
+- emaiul summary to managers for approval
+- needs to be documented if employee did not log overtime
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## ui
+- bootstrap -> formatting
