@@ -15,13 +15,15 @@ describe 'navigate' do
    end
 
    describe 'creation' do
-	it 'a new post can be created' do
-		visit new_post_path
-		expect(page.status_code).to eq(200)
-   	end
+
+    before do
+      visit new_post_path
+    end
+	  it 'a new post can be created' do
+  		expect(page.status_code).to eq(200)
+    end
 
    	it 'can be created from new form page' do
-     visit new_post_path
 	   fill_in 'post[date]', with: Date.today
 	   fill_in 'post[rationale]', with: "some rationale"
      click_on "Save"
