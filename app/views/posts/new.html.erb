@@ -1,8 +1,0 @@
-<%= form_for @post do |f| %>
-	<%= f.date_field :date %><br>
-	<%= f.text_field :Department %><br>
-	<%= f.text_field :adjustment %><br>
-	<%= f.text_area  :rationale %><br>
-	<%= f.number_field :count , min:1%><br>
-	<%= f.submit 'Save' %>
-<% end %>
