@@ -2,6 +2,7 @@ class PostsController < ApplicationController
 	
 	before_action :find_post , only: [:show , :edit , :delete]
 	def index 
+		@posts = Post.all
 	end
 
 	def new
