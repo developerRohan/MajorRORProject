@@ -7,7 +7,12 @@
 		<!-- <a href="#">Profile</a> -->
 		<%= link_to 'Request Entries' , posts_path %>
 	</li>
-	<li class="dropdown pull-right">
+
+	<li class="<%= active?( new_post_path) %>">
+		<%= link_to 'New post' , new_post_path %>
+	</li>
+	<li class
+	="dropdown pull-right">
 		 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Account<strong class="caret"></strong></a>
 		<ul class="dropdown-menu">
 			<li>
