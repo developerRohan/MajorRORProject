@@ -1,6 +1,13 @@
 FactoryGirl.define do
   factory :post do
-    date "2017-10-07"
-    rationale "MyText"
+    date Date.today
+    rationale "Some Rationale"
+    user
+  end
+
+  factory :second_post, class: "Post" do
+    date Date.yesterday
+    rationale "Some more content"
+     user #because post are referencing user
   end
 end
