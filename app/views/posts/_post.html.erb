@@ -1,4 +1,4 @@
- 
+    <% @posts.each do |post| %>
       <tr>
         <td>
           <%= post.id %>
@@ -12,5 +12,13 @@
         <td>
           <%= truncate(post.rationale) %>
         </td>
+        <td>
+          <td>
+            <td>
+                <%= link_to 'Edit', edit_post_path(post) %>
+            </td>
+          </td>
+        </td>
       </tr>
+      <% end %>
     
