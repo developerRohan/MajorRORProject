@@ -13,7 +13,7 @@
 puts "1 User and 1 adminuser are created"
 
 20.times do |post|
-  Post.create!(date: Date.today, rationale: "#{post} rationale content", user_id: @user.id)
+  Post.create!(date: Date.today, rationale: "#{post} rationale content", user_id: @user.id , overtime_request: 2.5)
 end
 
 puts "20 Posts have been created"

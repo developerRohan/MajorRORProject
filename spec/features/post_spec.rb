@@ -44,6 +44,7 @@ describe 'navigate' do
    	it 'can be created from new form page' do
 	   fill_in 'post[date]', with: Date.today
 	   fill_in 'post[rationale]', with: "some rationale"
+     fill_in 'post[overtime_request]', with: 2.5
      click_on "Save"
      expect(page).to have_content("some rationale")
     
@@ -52,6 +53,7 @@ describe 'navigate' do
     it 'will have user associated with it' do
      fill_in 'post[date]', with: Date.today
      fill_in 'post[rationale]', with: "User Association"
+     fill_in 'post[overtime_request]', with: 2.5
      click_on "Save"
      expect(User.last.posts.last.rationale).to eq("User Association")
     end
@@ -67,6 +69,7 @@ describe 'navigate' do
       visit edit_post_path(@post)
       fill_in 'post[date]' , with: Date.today
       fill_in 'post[rationale]' , with: "Edited content"
+      fill_in 'post[overtime_request]', with: 2.5
       click_on "Save"
 
       expect(page).to have_content("Edited content")

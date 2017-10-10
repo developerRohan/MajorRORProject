@@ -11,7 +11,7 @@ gem 'rails', '~> 5.0.5'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
-gem 'puma', '~> 3.0'
+gem 'puma', '~> 3.10'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -40,6 +40,7 @@ gem 'gritter', '~> 1.2'
 gem 'administrate', '~> 0.8.1'
 gem 'bourbon', '~> 4.3', '>= 4.3.4'
 gem 'pundit', '~> 1.1'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
