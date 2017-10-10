@@ -32,6 +32,7 @@ class PostDashboard < Administrate::BaseDashboard
     :user,
     :date,
     :rationale,
+    :status
   ].freeze
 
 end
