@@ -40,6 +40,8 @@ gem 'gritter', '~> 1.2'
 gem 'administrate', '~> 0.8.1'
 gem 'bourbon', '~> 4.3', '>= 4.3.4'
 gem 'pundit', '~> 1.1'
+gem 'twilio-ruby', '~> 5.3', '>= 5.3.1'
+gem 'dotenv-rails' , :groups => [:development, :test]
 
 
 group :development, :test do
