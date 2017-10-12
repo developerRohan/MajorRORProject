@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'notifications/create'
+
   namespace :admin do
     resources :users
     resources :posts

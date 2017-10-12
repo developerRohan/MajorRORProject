@@ -39,6 +39,7 @@ class UserDashboard < Administrate::BaseDashboard
     :created_at,
     :updated_at,
     :type,
+
   ].freeze
 
   FORM_ATTRIBUTES = [
@@ -46,6 +47,6 @@ class UserDashboard < Administrate::BaseDashboard
     :password,
     :first_name,
     :last_name,
-    :type
+    :type,
   ].freeze
 end

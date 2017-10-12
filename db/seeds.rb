@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-@user = User.create(email: "test@test.com", password: "asdfasdf", password_confirmation: "asdfasdf", first_name: "Jon", last_name: "Snow")
+@user = User.create(email: "test@test.com", password: "asdfasdf", password_confirmation: "asdfasdf", first_name: "Jon", last_name: "Snow" )
 @admin_user = AdminUser.create(email: "rohan@gmail.com", password: "rohanarora", password_confirmation: "rohanarora", first_name: "rohan", last_name: "arora")
 
 puts "1 User and 1 adminuser are created"
