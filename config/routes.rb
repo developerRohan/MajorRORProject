@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :audit_logs
   get 'notifications/create'
 
   namespace :admin do
