@@ -45,33 +45,39 @@
 		</div>
 	</div> <a class="left carousel-control" href="#carousel-563343" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-563343" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 </div>
-<h1>Pending proposals</h1>
+<h2>Items Pending Your Approval</h2>
 <div class='container-fluid'>
-  	<div class='pending-homepage row'>
-		<div class='homepage-block col-md-3'>
-	      <p>asdf</p>
-	    </div>
+  <div class='pending-homepage row'>   
+    <% @pending_approvals.each do |pending_approval| %>
+      <div class='homepage-block col-md-3'>
+        <h4>
+          <%= pending_approval.user.full_name %>
+        </h4>
 
-	    <div class='homepage-block col-md-3'>
-	      <p>asdf</p>
-	    </div>
+        <p>
+          <span class='pending-details'>Date Submitted:</span> <%= pending_approval.date %>
+        </p>
 
-	    <div class='homepage-block col-md-3'>
-	      <p>asdf</p>
-	    </div>
+        <p>
+          <span class='pending-details'>Rationale:</span> <%= truncate pending_approval.rationale, length: 42 %>
+        </p>
+        <div class='row'>
+		  <div class='col-md-6 column'>
+		      <%= link_to 'Approve', approve_post_path(pending_approval), class: 'btn btn-success btn-block' %>
 
-	    <div class='homepage-block col-md-3'>
-	      <p>asdf</p>
-	    </div>
+		  </div>
+		  <div class='col-md-6 column'>
+  			<%= link_to 'Review', edit_post_path(pending_approval), class: 'btn btn-warning btn-block' %>
+		  </div>
+		</div>
+      </div>
+      
+	<% end %>
+ </div>
 
-	    <div class='homepage-block col-md-3'>
-	      <p>asdf</p>
-	    </div>
-	  </div>
-
-	  <div class='pending-homepage'>
-	    <div>
-	      <p>asdf</p>
-	    </div>
+  <div class='pending-homepage'>
+    <div>
+      <p>asdf</p>
+    </div>
   </div>
 </div>

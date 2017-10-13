@@ -1,10 +1,16 @@
 class PostsController < ApplicationController
 	
-	before_action :find_post , only: [:show , :edit , :update , :destroy]
+	before_action :find_post , only: [:show , :edit , :update , :destroy , :approve]
 	def index 
     # @posts = current_user.posts
 		@posts =Post.posts_by(current_user).page(params[:page]).per(10) # it is always better to apply database validations in model rather than in controllers 
 	end
+
+  def approve
+    authorize @post
+    @post.approved!
+    redirect_to root_path, notice: "The post has been approved"
+  end
 
 	def new
 		@post = Post.new

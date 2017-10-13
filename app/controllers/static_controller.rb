@@ -1,6 +1,6 @@
 class StaticController < ApplicationController
 
 	def homepage
-		puts $BASE_HOLIDAY 
+		@pending_approvals = Post.where(status: 'submitted') 
 	end
 end
