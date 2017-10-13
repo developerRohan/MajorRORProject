@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 	before_action :find_post , only: [:show , :edit , :update , :destroy]
 	def index 
     # @posts = current_user.posts
-		@posts =Post.posts_by current_user # it is always better to apply database validations in model rather than in controllers 
+		@posts =Post.posts_by(current_user).page(params[:page]).per(10) # it is always better to apply database validations in model rather than in controllers 
 	end
 
 	def new

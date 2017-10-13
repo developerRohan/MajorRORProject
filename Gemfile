@@ -42,6 +42,7 @@ gem 'bourbon', '~> 4.3', '>= 4.3.4'
 gem 'pundit', '~> 1.1'
 gem 'twilio-ruby', '~> 5.3', '>= 5.3.1'
 gem 'dotenv-rails' , :groups => [:development, :test]
+gem 'kaminari', '~> 1.0', '>= 1.0.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
