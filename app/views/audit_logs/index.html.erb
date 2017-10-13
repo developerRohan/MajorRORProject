@@ -22,9 +22,12 @@
       <th></th>
     </tr>
   </thead>
-  <tbody>
+  <tbody id="audit_logs">
     <%= render @audit %>
   </tbody>
 </table>
 
-<%= paginate @audit %>
+<div id="paginator">
+  <%= paginate @audit, remote: true %>
+</div>
+
