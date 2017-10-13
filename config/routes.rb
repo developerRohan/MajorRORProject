@@ -21,9 +21,9 @@ Rails.application.routes.draw do
       get :approve
     end
   end
+  get '/count' => "posts#count"
   devise_for :users, skip: [:registeration]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   root to: 'static#homepage'
-  resources :audit_logs, except: [:new, :edit, :destroy]
 end
