@@ -5,6 +5,9 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
 
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+  def admin_types
+      ['AdminUser']
+  end
 
   private
 
@@ -12,5 +15,7 @@ class ApplicationController < ActionController::Base
     flash[:alert] = "you are not authorised tothis action.:) "
     redirect_to(root_path)
   end
+
+
 
 end
