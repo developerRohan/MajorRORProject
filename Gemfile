@@ -36,6 +36,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'devise', '~> 4.3'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'rails_12factor', '~> 0.0.3'
 gem 'gritter', '~> 1.2'
 gem 'administrate', '~> 0.8.1'
 gem 'bourbon', '~> 4.3', '>= 4.3.4'
@@ -43,6 +44,7 @@ gem 'pundit', '~> 1.1'
 gem 'twilio-ruby', '~> 5.3', '>= 5.3.1'
 gem 'dotenv-rails' , :groups => [:development, :test]
 gem 'kaminari', '~> 1.0', '>= 1.0.1'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
