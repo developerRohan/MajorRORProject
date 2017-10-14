@@ -12,10 +12,6 @@ class PostsController < ApplicationController
     redirect_to root_path, notice: "The post has been approved"
   end
 
-  def count
-    @todaysPosts = Post.where(date: Date.today)
-  end
-
 	def new
 		@post = Post.new
 	end
